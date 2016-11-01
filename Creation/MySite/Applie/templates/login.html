@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+{% if message %}
+<h1>{{message}}</h1>
+{% endif %}
+
+
+
+
+
+  {% csrf_token %}
+  {% crispy form %}
+{% endblock %}
